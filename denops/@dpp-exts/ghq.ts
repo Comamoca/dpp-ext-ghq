@@ -8,8 +8,6 @@ import { join } from "https://deno.land/std@0.204.0/path/mod.ts";
 import { basename } from "https://deno.land/std@0.202.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.10.0/mod.ts";
 
-console.log("dpp-ext-ghq is loaded!");
-
 type Params = Record<string, never>;
 
 type Args = {
@@ -34,9 +32,6 @@ export class Ext extends BaseExt<Params> {
           "expand",
           params.ghq_root,
         );
-
-        console.log(`${"-".repeat(20)} DEBUG ${"-".repeat(20)}`);
-        console.log(expanded_ghq_root, params.repos);
 
         const plugins: Plugin[] = [];
 
